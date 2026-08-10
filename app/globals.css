@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-sans: var(--font-archivo), -apple-system, "Segoe UI", Inter, system-ui, sans-serif;
+
+  --animate-cinq-cue: cinqCue 2.6s ease-in-out infinite;
+  --animate-cinq-glow: cinqGlow 7s ease-in-out infinite;
+}
+
+@keyframes cinqCue {
+  0%, 100% { transform: translateY(0); opacity: .4; }
+  50% { transform: translateY(7px); opacity: 1; }
+}
+
+@keyframes cinqGlow {
+  0%, 100% { opacity: .55; }
+  50% { opacity: .85; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0e14;
+  color: #F5F1E8;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+a {
+  color: #C4A06A;
+  text-decoration: none;
+}
+a:hover {
+  color: #F5F1E8;
+}
+
+::selection {
+  background: #7A1F2B;
+  color: #F5F1E8;
+}
+
+/* Repeating diagonal-line texture used by amenity/site-plan placeholder boxes. */
+.hatch-pattern {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(196, 160, 106, 0.09) 0 2px,
+    rgba(196, 160, 106, 0) 2px 10px
+  );
+}
